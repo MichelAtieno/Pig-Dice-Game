@@ -53,13 +53,16 @@ $(document).ready(function(){
    });
 
    function nameScore(){
-
+    $("#player1").text(allPlayers[0].playerName);
+    $("#player2").text(allPlayers[1].playerName);
+    $("#player1Score").text(allPlayers[0].score);
+    $("#player2Score").text(allPlayers[1].score);
    }
 
    function changePlayer1(){
 
    }
-   
+
    function changePlayer2() {
 
    }
