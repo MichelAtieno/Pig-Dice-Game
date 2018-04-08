@@ -6,7 +6,7 @@ var allRolls = []
 function pigDice (playerName, score) {
   this.playerName = playerName;
   this.score = score;
-  allPLayers.push(this);
+  allPlayers.push(this);
 }
 
 Array.prototype.sum = function() {
@@ -60,6 +60,29 @@ $(document).ready(function(){
    }
 
    function changePlayer1(){
+     if($("#player1play").is(":visible")) {
+       allRolls = [0];
+       $("total").text(allRolls);
+       setTimeout(function() {
+         alert("You rolled 1");
+       }, 50);
+       setTimeout (function() {
+         $("player2play").text(allPlayers[1].playerName).show();
+       }, 100);
+       $("player1play").hide();
+       nameScore();
+     } else if ($("player2play").is(":visible")) {
+       allRolls = [0];
+       $("#total").text(allRolls);
+       setTimeout(function() {
+         alert("You rolled a 1");
+       }, 50);
+       setTimeout(function() {
+         $("player1play").text(allPlayers[0].playerName).show();
+       }, 100);
+        $("player2play").hide();
+        nameScore();
+     }
 
    }
 
