@@ -37,9 +37,32 @@ $(document).ready(function(){
       allRolls.push(randomRoll);
       $("total").text(allRolls.sum());
     } else {
-      changePlayer();
+      changePlayer1();
     }
-  })
+  });
+
+   $("#hold").click(function(event) {
+     changePlayer2();
+     if (allPlayers[0].score >= 100) {
+       alert(allPlayers[0].playerName + "wins");
+       document.location.reload(true);
+     } else if (allPlayers[1].score >= 100) {
+       alert(allPlayers[1].playerName + "wins");
+       document.location.reload(true);
+     }
+   });
+
+   function nameScore(){
+
+   }
+
+   function changePlayer1(){
+
+   }
+   
+   function changePlayer2() {
+
+   }
 
 
 })
