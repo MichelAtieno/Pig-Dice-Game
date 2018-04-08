@@ -2,13 +2,21 @@
      text-align: center;
      font-style: oblique;
      text-decoration: underline;
-     color:
 }
 
+.jumbotron {
+   background-color: #a6b398;
+}
 img {
   margin-left: 500px;
 }
 
 #play >p {
+  font-size: 20px;
+}
+
+p {
+  font-style: oblique;
+  font-weight: bolder;
   font-size: 20px;
 }
