@@ -5,14 +5,29 @@
     <link href="css/styles.css" type="text/css" rel="stylesheet">
     <title>Pig Dice</title>
  </head>
-     <div class="jumbotron">
-       <h1> Pig Dice </h1>
-       <img src="images/crying-pig.jpg" alt="image of a pig">
-    </div>
 
 
  <body>
-   <div class="container">
+   <div class="container-fluid">
+     <div class="jumbotron">
+       <div class="row">
+        <div class="col-md-6" id="header">
+       <h1> Pig Dice </h1>
+       <img src="images/crying-pig.jpg" alt="image of a pig">
+     </div>
+     <div class="col-md-6" id="rules">
+       <h1>Game Rules</h1>
+          <h4>First Player to 100 pts wins!</h4>
+          <ul>
+           <li>Player 1 goes first</li>
+           <li>Click the "Roll" button to roll a virtual 6-sided die</li>
+           <li>Values for 2-6 get added to the "Roll Total" value for each turn</li>
+           <li>If you roll a 1, your turn is over and you lose all points earned</li>
+           <li>To end turn, select "Hold" button- this will add the "Roll Total" to the player's score</li>
+          </ul>
+       </div>
+     </div>
+   </div>
      <div class="row">
        <div class="col-md-6">
          <form id="players">
@@ -26,8 +41,7 @@
          </div>
         </form>
        </div>
-       <div class="col-md-6">
-         <form id="play">
+       <div class="col-md-6" id="play">
            <p><span id="player1Name"></span>Scores<span id="player1Score"></span></p>
            <p id="player1play"></p>
            <button class="btn btn-primary" type="submit" id="roll">Roll</button>
@@ -35,9 +49,6 @@
            <br>
            <p><span id="player2Name"></span>Scores<span id="player2Score"></span></p>
            <p id="player2play"></p>
-           <button class="btn btn-primary" type="submit" id="roll1">Roll</button>
-           <button class="btn btn-success" type="submit" id="hold1">Hold</button>
-         </form>
         </div>
 
             <br>
@@ -58,7 +69,8 @@
         </div>
       </div>
 
-
+      <div class="rules">
+            </div>
 
 
 

@@ -26,7 +26,7 @@ $(document).ready(function(){
     var player2 = new pigDice(inputtedplayer2, 0);
     $("#player1play").text(allPlayers[0].playerName).show();
     nameScore();
-    $("form#players").hide()
+    $("form").hide()
     $("#play").show()
   })
 
@@ -43,19 +43,6 @@ $(document).ready(function(){
     }
   });
 
-  $("#roll1").click(function(event) {
-    event.preventDefault();
-    $("#result1").show();
-    var randomRoll = (1 + Math.floor(Math.random()*6));
-    $("#result1").text(randomRoll);
-    if (randomRoll >= 2) {
-      allRolls.push(randomRoll);
-      $("total1").text(allRolls.sum());
-    } else {
-      changePlayer2();
-    }
-  });
-
    $("#hold").click(function(event) {
      changePlayer2();
      if (allPlayers[0].score >= 100) {
@@ -67,16 +54,6 @@ $(document).ready(function(){
      }
    });
 
-   $("#hold1").click(function(event) {
-     changePlayer1();
-     if (allPlayers[0].score >= 100) {
-       alert(allPlayers[0].playerName + "wins");
-       document.location.reload(true);
-     } else if (allPlayers[1].score >= 100) {
-       alert(allPlayers[1].playerName + "wins");
-       document.location.reload(true);
-     }
-   });
 
    function nameScore() {
     $("#player1").text(allPlayers[0].playerName);
