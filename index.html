@@ -5,9 +5,57 @@
     <link href="css/styles.css" type="text/css" rel="stylesheet">
     <title>Pig Dice</title>
  </head>
+     <div class="jumbotron">
+       <h1> Pig Dice </h1>
+       <img src="images/crying-pig.jpg" alt="image of a pig">
+    </div>
 
 
  <body>
+   <div class="container">
+     <div class="row">
+       <div class="col-md-6">
+         <form id="players">
+           <div class="form-group">
+             <label for="player1"><p>Player 1</p></label>
+             <input id="player1" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+             <label for="player2"><p>Player 2</p></label>
+             <input id="player2" class="form-control" type="text">
+         </div>
+        </form>
+       </div>
+       <div class="col-md-6">
+         <form id="play">
+           <p><span id="player1Name"></span>Scores<span id="player1Score"></span></p>
+           <p id="player1play"></p>
+           <button class="btn btn-default" type="submit" id="roll">Roll</button>
+           <button class="btn btn-default" type="submit" id="hold">Hold</button>
+           <br>
+           <p><span id="player2Name"></span>Scores<span id="player2Score"></span></p>
+           <button class="btn btn-default" type="submit" id="roll">Roll</button>
+           <button class="btn btn-default" type="submit" id="hold">Hold</button>
+           <p id="player2play"></p>
+         </form>
+        </div>
+
+            <br>
+
+      <div class="row">
+        <div col-md-12>
+            <p id="result"></p>
+            <br>
+            <p id="total"></p>
+        </div>
+      </div>
+
+
+
+
+
+
+   </div>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/script.js"></script>
  </body>
