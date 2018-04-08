@@ -87,8 +87,24 @@ $(document).ready(function(){
    }
 
    function changePlayer2() {
-
-   }
-
-
-})
+        if ($("player1play").is(":visible")) {
+          allPlayers[0].score = (allPlayers[0].score += allRolls.sum());
+          alert("Congratulations" + "You have" + allRolls.sum() + "points");
+          allRolls = [0];
+          $("#total").text(allRolls)
+          $("#player1play").hide();
+          $("#player2play").text(allPlayers[1].playerName).show();
+          console.log(allPlayers[0].score);
+          nameScore();
+        }else {
+          alert ("Congratulations" + "You have" + allRolls.sum() + "points");
+          allPlayers[1].score = (allPlayers[1].score += allRolls.sum());
+          allRolls = [0];
+          $("#total").text(allRolls)
+          $("#player2play").hide();
+          $("#player1play").text(allPlayers[0].playerName).show();
+          console.log(allPlayers[1].score);
+          nameScore();
+        }
+     }
+   });
